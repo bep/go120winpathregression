@@ -1,5 +1,7 @@
-package golibtemplate
+package go120winpathregression
 
-func Foo() string {
-	return "foo"
+import "path/filepath"
+
+func Clean(s string) string {
+	return filepath.Clean(filepath.FromSlash(s))
 }

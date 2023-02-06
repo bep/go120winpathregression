@@ -1,12 +1,13 @@
-package golibtemplate
+package go120winpathregression
 
 import (
+	"path/filepath"
 	"testing"
 
 	qt "github.com/frankban/quicktest"
 )
 
-func TestFoo(t *testing.T) {
+func TestTo(t *testing.T) {
 	c := qt.New(t)
-	c.Assert(Foo(), qt.Equals, "foo")
+	c.Assert(Clean("////post/////"), qt.Equals, filepath.FromSlash("/post"))
 }
